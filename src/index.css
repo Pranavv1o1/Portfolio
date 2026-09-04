@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cinematic warm-neutral palette */
+    --paper: #FFFCF2;
+    --stone: #CCC5B9;
+    --coffee: #403D39;
+    --espresso: #252422;
+    --ember: #EB5E28;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--coffee);
+    font-family: 'Manrope', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(235, 94, 40, 0.2);
+    color: var(--espresso);
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--paper);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(64, 61, 57, 0.3);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(64, 61, 57, 0.5);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .label-tech {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(64, 61, 57, 0.55);
+  }
+  /* Light translucent panel for editorial surfaces */
+  .light-panel {
+    background: rgba(255, 252, 242, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(64, 61, 57, 0.12);
+  }
+  /* Dark panel for Code Factory technical surfaces */
+  .dark-panel {
+    background: rgba(37, 36, 34, 0.04);
+    border: 1px solid rgba(37, 36, 34, 0.12);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Subtle grain texture for depth */
+  .grain-paper {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.25 0 0 0 0 0.24 0 0 0 0 0.22 0 0 0 0.3 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Topographic line texture — coffee toned */
+  .topo-lines {
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23403d39' stroke-width='0.5' opacity='0.10'%3E%3Cpath d='M0 100 Q50 60 100 100 T200 100'/%3E%3Cpath d='M0 80 Q50 40 100 80 T200 80'/%3E%3Cpath d='M0 120 Q50 80 100 120 T200 120'/%3E%3Cpath d='M0 60 Q50 20 100 60 T200 60'/%3E%3Cpath d='M0 140 Q50 100 100 140 T200 140'/%3E%3Cpath d='M0 40 Q50 0 100 40 T200 40'/%3E%3Cpath d='M0 160 Q50 120 100 160 T200 160'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
