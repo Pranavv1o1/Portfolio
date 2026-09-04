@@ -49,7 +49,7 @@ export function Contact() {
               const resolved = link.href
                 ? link.href
                 : isMail
-                  ? 'mailto:hello@pranav.dev'
+                  ? 'mailto:pranavsaraswat565@gmail.com'
                   : null;
 
               return (
@@ -58,6 +58,7 @@ export function Contact() {
                   href={resolved ?? undefined}
                   target={resolved && !isMail ? '_blank' : undefined}
                   rel={resolved && !isMail ? 'noopener noreferrer' : undefined}
+                  aria-label={`${link.label} (${isMail ? 'Send email' : 'Opens in new tab'})`}
                   className="group inline-flex items-center gap-2.5 rounded-xl border border-coffee/20 bg-stone/20 px-5 py-3 text-sm text-ink-mid backdrop-blur-sm transition-all duration-300 hover:border-ember/45 hover:bg-ember/10 hover:text-espresso"
                 >
                   <Icon size={16} className="text-ink-mid transition-colors group-hover:text-ember" />

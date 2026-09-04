@@ -150,9 +150,9 @@ export const codeFactory = {
 };
 
 export const socialLinks = [
-  { label: 'GitHub', href: null as string | null, icon: 'github' },
-  { label: 'LinkedIn', href: null as string | null, icon: 'linkedin' },
-  { label: 'Email', href: null as string | null, icon: 'mail' },
+  { label: 'GitHub', href: 'https://github.com/Pranavv1o1', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/pranav-saraswat-688aa4340', icon: 'linkedin' },
+  { label: 'Email', href: 'mailto:pranavsaraswat565@gmail.com', icon: 'mail' },
 ];
 
 export const footer = {
